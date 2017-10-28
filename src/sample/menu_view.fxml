@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="contentBP" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1">
+   <center>
+      <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="15.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="btnstart" mnemonicParsing="false" text="start" />
+            <Button fx:id="btncredits" mnemonicParsing="false" text="credits" />
+            <Button fx:id="btnexit" mnemonicParsing="false" text="exit" />
+         </children>
+      </VBox>
+   </center>
+   <top>
+      <Label prefHeight="119.0" prefWidth="216.0" text="Sliding word puzzle" wrapText="true" BorderPane.alignment="CENTER">
+         <font>
+            <Font size="23.0" />
+         </font>
+      </Label>
+   </top>
+</BorderPane>
