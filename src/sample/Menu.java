@@ -22,7 +22,16 @@ public class Menu implements Initializable {
         btnstart.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
-                System.out.println("btnStart");
+                try {
+                    contentBP.getChildren().clear();
+                    LevelsPane levels = new LevelsPane();
+
+                    FXMLLoader loader = new FXMLLoader(getClass().getResource("level_view.fxml"));
+                    loader.setController(levels);
+                    contentBP.getChildren().add(loader.load());
+                }  catch (IOException ioe) {
+                    ioe.printStackTrace();
+                }
             }
         });
 
