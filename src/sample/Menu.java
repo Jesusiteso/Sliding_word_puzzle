@@ -24,7 +24,7 @@ public class Menu implements Initializable {
             public void handle(ActionEvent event) {
                 try {
                     contentBP.getChildren().clear();
-                    LevelsPane levels = new LevelsPane();
+                    LevelsPane levels = new LevelsPane(contentBP);
 
                     FXMLLoader loader = new FXMLLoader(getClass().getResource("level_view.fxml"));
                     loader.setController(levels);

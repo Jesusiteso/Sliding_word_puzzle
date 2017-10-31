@@ -33,5 +33,6 @@
          </children>
       </GridPane>
       <Label layoutX="41.0" layoutY="24.0" text="Levels" />
+      <Button fx:id="btnreturn" layoutX="49.0" layoutY="633.0" mnemonicParsing="false" text="Regresar" />
    </children>
 </Pane>
