@@ -18,6 +18,7 @@ public class Credits implements Initializable {
     public Button btnreturn;
 
     private BorderPane parentPane;
+    private ResourceBundle bundle;
 
     public Credits (BorderPane inPane) {
         this.parentPane = inPane;
@@ -26,17 +27,21 @@ public class Credits implements Initializable {
     @Override
     public void initialize(URL location, ResourceBundle resources) {
 
+
         btnreturn.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
 
                 try{
+                    String resourcesLocation = "messages.messages";
+                    ResourceBundle rb = ResourceBundle.getBundle(resourcesLocation);
 
                     parentPane.getChildren().clear();
 
                     Menu inicioMenu = new Menu();
 
                     FXMLLoader loader = new FXMLLoader(getClass().getResource("menu_view.fxml"));
+                    loader.setResources(rb);
                     loader.setController(inicioMenu);
                     parentPane.getChildren().add(loader.load());
 

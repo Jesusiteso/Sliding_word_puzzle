@@ -15,12 +15,15 @@ public class Controller implements Initializable {
     public void initialize(URL location, ResourceBundle resources) {
 
         try {
+            String resourcesLocation = "messages.messages";
+            ResourceBundle rb = ResourceBundle.getBundle(resourcesLocation);
 
             contentPane.getChildren().clear();
 
             Menu inicioMenu = new Menu();
 
             FXMLLoader loader = new FXMLLoader(getClass().getResource("menu_view.fxml"));
+            loader.setResources(rb);
             loader.setController(inicioMenu);
             contentPane.getChildren().add(loader.load());
 

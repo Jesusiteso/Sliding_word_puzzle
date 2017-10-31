@@ -31,11 +31,15 @@ public class LevelsPane implements Initializable {
             public void handle(ActionEvent event) {
                 try{
 
+                    String resourcesLocation = "messages.messages";
+                    ResourceBundle rb = ResourceBundle.getBundle(resourcesLocation);
+
                     parentPane.getChildren().clear();
 
                     Menu inicioMenu = new Menu();
 
                     FXMLLoader loader = new FXMLLoader(getClass().getResource("menu_view.fxml"));
+                    loader.setResources(rb);
                     loader.setController(inicioMenu);
                     parentPane.getChildren().add(loader.load());
 

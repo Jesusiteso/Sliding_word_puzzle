@@ -10,14 +10,15 @@
    <center>
       <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="15.0" BorderPane.alignment="CENTER">
          <children>
-            <Button fx:id="btnstart" mnemonicParsing="false" text="start" />
-            <Button fx:id="btncredits" mnemonicParsing="false" text="credits" />
-            <Button fx:id="btnexit" mnemonicParsing="false" text="exit" />
+            <Button fx:id="btnstart" mnemonicParsing="false" text="%main_btnstart" />
+            <Button fx:id="btnoption" mnemonicParsing="false" text="%main_btnoption" />
+            <Button fx:id="btncredits" mnemonicParsing="false" text="%main_btncredits" />
+            <Button fx:id="btnexit" mnemonicParsing="false" text="%main_btnexit" />
          </children>
       </VBox>
    </center>
    <top>
-      <Label prefHeight="119.0" prefWidth="216.0" text="Sliding word puzzle" wrapText="true" BorderPane.alignment="CENTER">
+      <Label fx:id="lbtitle" alignment="CENTER" contentDisplay="CENTER" prefHeight="119.0" prefWidth="216.0" text="%main_title" wrapText="true" BorderPane.alignment="CENTER">
          <font>
             <Font size="23.0" />
          </font>
