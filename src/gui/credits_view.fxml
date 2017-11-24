@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.Pane?>
+
+<Pane fx:id="creditsPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label fx:id="lblcredits" layoutX="47.0" layoutY="46.0" prefHeight="21.0" prefWidth="78.0" text="%credits_label" />
+      <Label fx:id="lbldeveloper" layoutX="57.0" layoutY="111.0" prefHeight="21.0" prefWidth="159.0" text="%credits_developer" />
+      <Label layoutX="75.0" layoutY="132.0" prefHeight="21.0" prefWidth="230.0" text="%credits_developername1" />
+      <Label layoutX="75.0" layoutY="153.0" prefHeight="21.0" prefWidth="230.0" text="%credits_developername2" />
+      <Button fx:id="btnreturn" layoutX="63.0" layoutY="577.0" mnemonicParsing="false" text="%general_btnreturn" />
+   </children>
+</Pane>
