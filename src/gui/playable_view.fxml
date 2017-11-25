@@ -3,6 +3,7 @@
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.Pane?>
@@ -41,11 +42,7 @@
             <Font size="24.0" />
          </font>
       </Label>
-      <Label fx:id="lblscore" layoutX="193.0" layoutY="78.0" prefHeight="35.0" prefWidth="143.0" text="score points">
-         <font>
-            <Font size="24.0" />
-         </font>
-      </Label>
       <TextArea fx:id="textArea" layoutX="47.0" layoutY="234.0" prefHeight="360.0" prefWidth="200.0" />
+      <TextField fx:id="textScore" layoutX="189.0" layoutY="80.0" />
    </children>
 </Pane>

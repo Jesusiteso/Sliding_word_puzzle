@@ -2,11 +2,10 @@ package gui;
 
 import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
-import javafx.event.EventHandler;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
-import javafx.scene.input.MouseEvent;
+import javafx.scene.control.TextField;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.Pane;
 import javafx.scene.text.Font;
@@ -22,9 +21,11 @@ public class PlayablePane implements Initializable {
 
     public Pane playablePane;
     public Label lblscore;
+    //public TextField textField;
     public GridPane gridPane;
     public TextArea textArea;
 
+    private TextField textScore;
     private int scoreplayer;
     //private Board board;
     private Timeline updater;
@@ -32,8 +33,12 @@ public class PlayablePane implements Initializable {
     public PlayablePane () {
         //this.board = BoardStore.createBoard("nivel 1");
         // System.out.println(board.toString());
+        this.textScore = new TextField(" " + Integer.toString(scoreplayer));
         this.scoreplayer = 100000;
-        lblscore.setText(" " + Integer.toString(scoreplayer));
+        playablePane.getChildren().add(textScore);
+        textScore.relocate(189,80);
+        //textField.setText(" " + Integer.toString(scoreplayer));
+        //lblscore.setText(" " + Integer.toString(scoreplayer));
     }
 
     @Override
@@ -49,6 +54,8 @@ public class PlayablePane implements Initializable {
         updater = new Timeline(new KeyFrame(Duration.seconds(1), event -> {
             if (scoreplayer > 0) {
                 scoreplayer -= 10;
+                textScore.setText(" " + Integer.toString(scoreplayer));
+                //textField.setText(" " + Integer.toString(scoreplayer));
                 //lblscore.setText("" + Integer.toString(scoreplayer));
             }
         }));
