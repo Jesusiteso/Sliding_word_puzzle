@@ -2,7 +2,7 @@ package pruebas;
 
 public class Scout{
 	
-	public int x, y;
+	private int x, y;
 	
 	//1 up, 2 right, 3 down, 4 left
 	public Scout(int y, int x) {
@@ -18,8 +18,7 @@ public class Scout{
 
 		Scout scout = (Scout) o;
 
-		if (x != scout.x) return false;
-		return y == scout.y;
+		return x == scout.x && y == scout.y;
 	}
 
 	@Override

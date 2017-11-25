@@ -16,7 +16,9 @@ public class GamePanel extends JPanel{
 
 	public GamePanel(int level){
 		this.setRequestFocusEnabled(true);
-		this.setSize(WIDTH, HEIGHT);
+		this.setLocation(300,0);
+		this.setSize(640, GameFrame.HEIGHT-30);
+
 		//this.setLayout(null);
 		this.setBackground(Color.CYAN);
 		this.board = new Board(level);
