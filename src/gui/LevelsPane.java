@@ -36,15 +36,15 @@ public class LevelsPane implements Initializable {
             @Override
             public void handle(ActionEvent event) {
                 try {
-                    String resourcesLocation = "messages.messages";
-                    ResourceBundle rb = ResourceBundle.getBundle(resourcesLocation);
+                    //String resourcesLocation = "messages.messages";
+                    //ResourceBundle rb = ResourceBundle.getBundle(resourcesLocation);
 
                     PlayablePane playablePane = new PlayablePane();
 
                     levelPane.getChildren().clear();
 
                     FXMLLoader loader = new FXMLLoader(getClass().getResource("playable_view.fxml"));
-                    loader.setResources(rb);
+                    //loader.setResources(rb);
                     loader.setController(playablePane);
                     levelPane.getChildren().add(loader.load());
                 } catch (IOException ioe) {
