@@ -29,21 +29,11 @@ public class GamePanel extends JPanel{
 		for (int i = 0; i < 6; i++) {
 			for (int n = 0; n < 6; n++) {
 				jLabels[i][n] = new JLabel("" + board.getCharacter(i,n));
-				//JLabel jLabel =  new JLabel("" + board.getCharacter(i,n));
 				jLabels[i][n].setFont (jLabels[i][n].getFont().deriveFont (100.0f));
 				this.add(jLabels[i][n]);
-				//this.setFont (this.getFont().deriveFont (64.0f));
 			}
 		}
 
-		/*
-		this.add(statsPanel);
-		statsPanel.setLocation(0, 0);
-
-		this.add(playPanel);
-		playPanel.setLocation(0, StatsPanel.STATS_HEIGHT);*/
-		
-		
 		controlTeclas = new ControlTeclas();
 		this.addKeyListener(controlTeclas);
 
@@ -53,38 +43,16 @@ public class GamePanel extends JPanel{
 		return board;
 	}
 
-	/*
-	public void addGumBot(GumBot gumbot) {
-		this.gumbot = gumbot;
-		playPanel.addGumBot(gumbot);
-		statsPanel.addGumBot(gumbot);
-	}
-	
-	public void reduceScore(int i){
-		this.statsPanel.reduceScore(i);
-	}
-	
-	public void repaintGame(){
-		playPanel.repaint();
-		statsPanel.repaint();
-	}*/
 
 	public void repaintGrid(Board inBoard){
-		//System.out.println("repaint - " + inBoard);
-		//this.setLayout();
 		inBoard.checkForWords();
-
 		this.setLayout(new GridLayout(6, 6));
 		for (int i = 0; i < 6; i++) {
 			for (int n = 0; n < 6; n++) {
 				jLabels[i][n].setText("" + inBoard.getCharacter(i,n));
 				jLabels[i][n].setBackground((inBoard.getTablero()[i][n].getIsWord()) ? Color.GREEN : Color.GRAY);
 				jLabels[i][n].setOpaque(true);
-				//System.out.print("" + inBoard.getCharacter(i,n));
-				/*JLabel jLabel =  new JLabel("" + inBoard.getCharacter(i,n));
-				jLabel.setFont (jLabel.getFont().deriveFont (100.0f));
-				this.add(jLabel);*/
-				//this.setFont (this.getFont().deriveFont (64.0f));
+
 			}
 		}
 	}

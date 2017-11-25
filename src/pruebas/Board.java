@@ -50,23 +50,6 @@ public class Board {
 	//!! Tablero[Y][X]!!
 	
 public Board(int choice){
-		/*
-		Tablero= new Tile[SIZE][SIZE];
-		
-		//Llenando de car�cteres la matriz
-		
-		for(int i = 0; i< SIZE; i++) {
-			for(int e = 0; e< SIZE; e++) {
-				Tablero[i][e]=new Tile(caracteresTest[i][e]);
-				Tablero[i][e].setIsEmpty(false);
-			}
-		}
-		Tablero[0][0].setIsInitial(true);
-		Tablero[5][5].setIsFinal(true);
-		Tablero[1][1].setIsEmpty(true);
-		blankX=1;
-		blankY=1;
-		initDiccionario1();*/
 
 	Tablero= new Tile[size][size];
 	//Llenando de carácteres la matriz
@@ -128,57 +111,7 @@ public Board(int choice){
 	}
 	
 	
-	public int getSize() {
-		return size;
-	}
 
-	public Tile[][] getTablero() {
-		return Tablero;
-	}
-
-	public void setTablero(Tile[][] tablero) {
-		Tablero = tablero;
-	}
-
-	public Boolean getIsInitial() {
-		return isInitial;
-	}
-
-	public void setIsInitial(Boolean isInitial) {
-		this.isInitial = isInitial;
-	}
-
-	public Boolean getIsFinal() {
-		return isFinal;
-	}
-
-	public void setIsFinal(Boolean isFinal) {
-		this.isFinal = isFinal;
-	}
-
-	public int getBlankX() {
-		return blankX;
-	}
-
-	public void setBlankX(int blankX) {
-		this.blankX = blankX;
-	}
-
-	public int getBlankY() {
-		return blankY;
-	}
-
-	public void setBlankY(int blankY) {
-		this.blankY = blankY;
-	}
-
-	public ArrayList<String> getDiccionario1() {
-		return Diccionario1;
-	}
-
-	public void setDiccionario1(ArrayList<String> diccionario1) {
-		Diccionario1 = diccionario1;
-	}
 	
 	
 	public Boolean moveUp() {
@@ -460,7 +393,8 @@ public void printIsWord() {
 		
 		return winCheck(0, 0, lista);
 	}
-	
+
+
 	public Boolean winCheck(int posY, int posX, ArrayList <Scout> arr){
 		
 		Scout neopolitan = new Scout(posY, posX);
@@ -503,28 +437,47 @@ public void printIsWord() {
 		
 		return false;
 	}
-
 	public char getCharacter(int x, int y){
 		return Tablero[x][y].getCaracter();
 	}
-	
-/*	public void winnable(int y, int x, int back) {
-		Scout Runner= new Scout(y, x, back);
-		int crossroadSize=0;
-	
-if(Tablero[Runner.y][Runner.x].getIsWord()==true) {//Checar donde empieza
-			
-		if(Runner.x<5 && Tablero[Runner.y][(Runner.x)+1].getIsWord()==true) {//Move Right
-			Runner.x++;
-			
-		}
-	
-	
-		}
-
-		
+	public int getSize() {
+		return size;
 	}
-	
-	*/
+	public Tile[][] getTablero() {
+		return Tablero;
+	}
+	public void setTablero(Tile[][] tablero) {
+		Tablero = tablero;
+	}
+	public Boolean getIsInitial() {
+		return isInitial;
+	}
+	public void setIsInitial(Boolean isInitial) {
+		this.isInitial = isInitial;
+	}
+	public Boolean getIsFinal() {
+		return isFinal;
+	}
+	public void setIsFinal(Boolean isFinal) {
+		this.isFinal = isFinal;
+	}
+	public int getBlankX() {
+		return blankX;
+	}
+	public void setBlankX(int blankX) {
+		this.blankX = blankX;
+	}
+	public int getBlankY() {
+		return blankY;
+	}
+	public void setBlankY(int blankY) {
+		this.blankY = blankY;
+	}
+	public ArrayList<String> getDiccionario1() {
+		return Diccionario1;
+	}
+	public void setDiccionario1(ArrayList<String> diccionario1) {
+		Diccionario1 = diccionario1;
+	}
 }
 

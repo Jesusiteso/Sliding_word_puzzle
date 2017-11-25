@@ -8,16 +8,17 @@ public class Tester {
 
 
 
+        //Ingresa el numero de nivel deseado
         String level = "";
         int levelnum = 0;
         level = JOptionPane.showInputDialog(null, "Introduce el número del nivel a jugar");
-
         levelnum = Integer.parseInt(level);
-
         System.out.println(levelnum);
 
+        //Crea un panel para el juego
         GamePanel gamePanel = new GamePanel(levelnum);
 
+        //Crea y corre el hilo principal del juego.
         GameInstance gameInstance = new GameInstance(gamePanel);
         gameInstance.start();
 
@@ -25,18 +26,6 @@ public class Tester {
         @SuppressWarnings("unused")
         GameFrame gameFrame = new GameFrame(gamePanel);
 
-
-/*
-        Board board = new Board();
-        board.printBoard();
-        board.checkForWords();
-        //board.moveRight();
-        board.printIsWord();
-
-
-
-        System.out.println("" + board.callWinCheck());
-*/
     }
 
 }
